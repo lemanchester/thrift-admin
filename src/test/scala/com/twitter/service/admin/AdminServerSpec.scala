@@ -23,7 +23,7 @@ import com.facebook.thrift.transport.TSocket
 import com.twitter.stats.Stats
 import com.twitter.xrayspecs.Eventually
 import java.io.IOException
-import java.net.{ConnectException, Socket}
+import java.net.{ConnectException, Socket, SocketException}
 
 import org.specs._
 import scala.collection.jcl
@@ -97,7 +97,7 @@ object AdminServiceSpec extends Specification with Eventually {
       server.askedToQuiesce mustBe false
       client.quiesce()
       server.askedToQuiesce mustBe true
-      new Socket("localhost", 9991) must eventually(throwA[ConnectException])
+      new Socket("localhost", 9991) must eventually(throwA[SocketException])
     }
 
     "provide stats" in {

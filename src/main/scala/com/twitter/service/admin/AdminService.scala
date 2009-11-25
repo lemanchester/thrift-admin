@@ -66,7 +66,7 @@ class AdminService(server: ServerInterface, runtime: RuntimeEnvironment) extends
     val jvmStats = new jcl.HashMap[String, java.lang.Long]
     jvmStats ++= Stats.getJvmStats.asInstanceOf[Map[String, java.lang.Long]]
     val counterStats = new jcl.HashMap[String, java.lang.Long]
-    counterStats ++= Stats.getCounterStats.asInstanceOf[Map[String, java.lang.Long]]
+    counterStats ++= Stats.getCounterStats(reset).asInstanceOf[Map[String, java.lang.Long]]
     val timingStats = new jcl.HashMap[String, Timing]
     for ((name, timing) <- Stats.getTimingStats(reset)) {
       timingStats(name) = new Timing(timing.count, timing.minimum, timing.maximum, timing.average)

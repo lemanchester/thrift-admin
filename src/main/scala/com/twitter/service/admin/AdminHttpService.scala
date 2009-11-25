@@ -135,7 +135,7 @@ class AdminHttpService(server: ServerInterface, runtime: RuntimeEnvironment) {
           case "txt" =>
             sendRaw(client, Stats.stats(reset))
           case _ =>
-            send(client, Map("jvm" -> Stats.getJvmStats, "counters" -> Stats.getCounterStats,
+            send(client, Map("jvm" -> Stats.getJvmStats, "counters" -> Stats.getCounterStats(reset),
                              "timings" -> Stats.getTimingStats(reset), "gauges" -> Stats.getGaugeStats(reset)))
         }
       case "server_info" =>

@@ -20,18 +20,18 @@
 
   <dependencies>
     <!-- want scala-compiler for running the console -->
-    <dependency org="org.scala-lang" name="scala-compiler" rev="2.7.5" />
-    <dependency org="org.scala-lang" name="scala-library" rev="2.7.5" />
+    <dependency org="org.scala-lang" name="scala-compiler" rev="2.7.6" />
+    <dependency org="org.scala-lang" name="scala-library" rev="2.7.6" />
+    <dependency org="org.scala-tools.testing" name="specs" rev="1.4.4" conf="test->*" />
+    <dependency org="junit" name="junit" rev="4.5" conf="test->*" />
     <dependency org="org.scala-tools" name="vscaladoc" rev="1.1-md-3" conf="bootstrap->*" />
 
     <dependency org="net.lag" name="configgy" rev="1.4" />
     <dependency org="thrift" name="libthrift" rev="751142" /> <!--auto-->
-    <dependency org="com.twitter" name="stats" rev="1.3" />
+    <dependency org="com.twitter" name="stats" rev="1.4" />
     <dependency org="com.twitter" name="json" rev="1.1" />
     <dependency org="com.twitter" name="xrayspecs" rev="1.0.3" />
 
-    <dependency org="org.scala-tools.testing" name="specs" rev="1.4.4" conf="test->*" />
-    <dependency org="junit" name="junit" rev="4.5" conf="test->*" /> <!--auto-->
     <dependency org="org.jmock" name="jmock" rev="2.4.0" conf="test->*" /> <!--auto-->
     <dependency org="org.hamcrest" name="hamcrest-all" rev="1.1" conf="test->*" /> <!--auto-->
     <dependency org="cglib" name="cglib" rev="2.1_3" conf="test->*" /> <!--auto-->
