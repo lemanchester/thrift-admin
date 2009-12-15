@@ -16,14 +16,14 @@
 
 package com.twitter.service.admin
 
-import net.lag.configgy.{Config, Configgy}
-import net.lag.logging.{Level, Logger}
-import com.facebook.thrift.protocol.TBinaryProtocol
-import com.facebook.thrift.transport.TSocket
-import com.twitter.stats.Stats
-import com.twitter.xrayspecs.Eventually
 import java.io.IOException
 import java.net.{ConnectException, Socket, SocketException}
+import com.twitter.stats.Stats
+import com.twitter.xrayspecs.Eventually
+import net.lag.configgy.{Config, Configgy}
+import net.lag.logging.{Level, Logger}
+import org.apache.thrift.protocol.TBinaryProtocol
+import org.apache.thrift.transport.TSocket
 
 import org.specs._
 import scala.collection.jcl

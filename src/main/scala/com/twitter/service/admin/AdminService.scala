@@ -16,13 +16,13 @@
 
 package com.twitter.service.admin
 
-import com.facebook.thrift.server.{TServer, TSimpleServer}
-import com.facebook.thrift.transport.TServerSocket
+import scala.collection.Map
+import scala.collection.jcl
 import com.twitter.stats.Stats
 import net.lag.configgy.{Config, RuntimeEnvironment, Configgy}
 import net.lag.logging.Logger
-import scala.collection.Map
-import scala.collection.jcl
+import org.apache.thrift.server.{TServer, TSimpleServer}
+import org.apache.thrift.transport.TServerSocket
 
 
 /**

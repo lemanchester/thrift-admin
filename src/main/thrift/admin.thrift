@@ -51,7 +51,7 @@ service Admin {
    * Returns the binary data passed in, as a verification that the server is alive and
    * functioning.
    */
-  binary ping(binary data)
+  binary ping(1: binary data)
   
   void reload_config()
   
@@ -76,7 +76,7 @@ service Admin {
    * Returns a collection of server statistics, categorized by type. Timing stats are read
    * destructively if "reset" is true.
    */
-  StatsResult stats(bool reset)
+  StatsResult stats(1: bool reset)
 
   ServerInfo serverInfo()
 }
